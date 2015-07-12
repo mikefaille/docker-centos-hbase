@@ -26,5 +26,5 @@ ADD conf/supervisor-hbase.ini /etc/supervisord.d/hbase.ini
 # Insert startup files
 ADD conf/start-hbase.sh /data/start-hbase.sh
 
-CMD ["/usr/bin/supervisord"]
+
 #env COMPRESSION=gzip  /data/start-opentsdb.sh
