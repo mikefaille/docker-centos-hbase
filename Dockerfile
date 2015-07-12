@@ -9,10 +9,10 @@ ENV HBASE $HBASE_HOME
 
 # hbase fondation
 RUN mkdir /hbase && cd /hbase && wget http://apache.mirror.vexxhost.com/hbase/$HBASE_VERSION/hbase-$HBASE_VERSION-bin.tar.gz  && tar -xzf hbase-$HBASE_VERSION-bin.tar.gz && rm hbase-$HBASE_VERSION-bin.tar.gz &&\
-    mkdir /data/persistant/hbase
+    mkdir /data/persistent/hbase
 
 # HBASE Setup
-VOLUME /data/persistant/hbase
+VOLUME /data/persistent/hbase
 ADD conf/hbase-site.xml /hbase/hbase-$HBASE_VERSION/conf/hbase-site.xml
 # ADD lib/hadoop-lzo-0.4.20-SNAPSHOT.jar /hbase/hbase-$HBASE_VERSION/lib/hadoop-lzo-0.4.20-SNAPSHOT.jar
 # ADD lib/libgplcompression.so /hbase/hbase-$HBASE_VERSION/lib/native/libgplcompression.so
