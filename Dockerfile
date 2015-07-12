@@ -9,7 +9,7 @@ ENV HBASE $HBASE_HOME
 
 # hbase fondation
 RUN mkdir /hbase && cd /hbase && wget http://apache.mirror.vexxhost.com/hbase/$HBASE_VERSION/hbase-$HBASE_VERSION-bin.tar.gz  && tar -xzf hbase-$HBASE_VERSION-bin.tar.gz && rm hbase-$HBASE_VERSION-bin.tar.gz &&\
-    mkdir /data/persistent/hbase
+    mkdir -p /data/persistent/hbase
 
 # HBASE Setup
 VOLUME /data/persistent/hbase
