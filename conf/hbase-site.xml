@@ -3,7 +3,7 @@
 <configuration>
   <property>
     <name>hbase.rootdir</name>
-    <value>file:///data/persistant/hbase</value>
+    <value>file:///data/persistent/hbase</value>
   </property>
   <property>
     <name>hbase.zookeeper.dns.interface</name>
