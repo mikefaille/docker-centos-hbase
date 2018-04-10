@@ -1,14 +1,13 @@
 FROM mikefaille/centos-java:latest
 MAINTAINER michael@faille.io <michael@faille.io>
 
-ENV HBASE_VERSION 1.1.1
+ENV HBASE_VERSION 1.2.6
 ENV HBASE_HOME /hbase/hbase-$HBASE_VERSION
 ENV HBASE $HBASE_HOME
 
 
-
 # hbase fondation
-RUN mkdir  /hbase && cd /hbase && wget http://apache.mirror.vexxhost.com/hbase/$HBASE_VERSION/hbase-$HBASE_VERSION-bin.tar.gz  && tar -xzf hbase-$HBASE_VERSION-bin.tar.gz && rm hbase-$HBASE_VERSION-bin.tar.gz &&\
+RUN mkdir  /hbase && cd /hbase && wget http://apache.mirror.iweb.ca/hbase/$HBASE_VERSION/hbase-$HBASE_VERSION-bin.tar.gz  && tar -xzf hbase-$HBASE_VERSION-bin.tar.gz && rm hbase-$HBASE_VERSION-bin.tar.gz &&\
     mkdir -p /data/persistent/hbase
 
 # HBASE Setup
